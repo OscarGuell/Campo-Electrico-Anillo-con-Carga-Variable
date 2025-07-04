@@ -69,4 +69,18 @@ def ring_generator(R1, R2, sigma, imRes, cpRes):
   ax.set_title(f'Anillo de radio interno R1={R1} y radio externo R2={R2}')
   plt.show()
 
-ring_generator(2, 4, 1e-9, 50, 10)
+
+## Parámetros a modificar por el usuario.
+# 'R1': Radio interno.
+R1 = 2 
+# 'R2': Radio externo.
+R2 = 4
+# 'sigma_0': Valor constante en la densidad de carga.
+sigma_0 = 1e-9
+# 'imRes': Resolución del anillo. Cantidad de puntos a generar en los arreglos correspondientes a radios y ángulos para coordenadas polares.
+imRes = 50
+# 'cpRes': Resolución del campo vectorial. Número de puntos por eje a evaluar. Se calcularán cpRes^3 puntos en total.
+cpRes = 10
+
+# Llamar a la función generadora.
+ring_generator(R1, R2, sigma_0, imRes, cpRes)
